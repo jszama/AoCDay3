@@ -20,3 +20,17 @@ for item in ruckSack:
             
 print(total)
     
+ # Part 2 
+total = 0
+currentCheck = 3
+
+for i in range(0 , len(ruckSack), 3):
+    currentData = ruckSack[i:currentCheck]
+    
+    for value, character in enumerate(string.ascii_letters, start=1):
+        if character in currentData[0] and character in currentData[1] and character in currentData[2]:
+            total += value
+
+    currentCheck += 3
+    
+print(total)
